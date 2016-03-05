@@ -10,7 +10,6 @@ import android.widget.Button;
 public class MainActivity extends BaseActivity{
 
     @Override
-    //看看是不是可以控制版本
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -19,7 +18,7 @@ public class MainActivity extends BaseActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent("com.quhaofeng.broadcastbestpractice.FORCE_OFFLINE");
-                sendBroadcast(intent);
+                sendBroadcast(intent);//测试
             }
         });
     }
