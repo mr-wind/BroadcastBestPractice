@@ -21,7 +21,7 @@ public class LoginActivity extends BaseActivity{
 
     private EditText accountEdit;
     private EditText passwordEdit;
-    private Button login;
+    private Button loginBtn;
 
     private CheckBox remeberPass;
 
@@ -33,7 +33,7 @@ public class LoginActivity extends BaseActivity{
         accountEdit = (EditText)findViewById(R.id.account);
         passwordEdit = (EditText)findViewById(R.id.password);
         remeberPass = (CheckBox)findViewById(R.id.remember_pass);
-        login = (Button)findViewById(R.id.login);
+        loginBtn = (Button)findViewById(R.id.login);
         boolean isRemember = mPreferences.getBoolean("remember_password", false);
         if(isRemember){
             String account = mPreferences.getString("account", "");
@@ -42,7 +42,7 @@ public class LoginActivity extends BaseActivity{
             passwordEdit.setText(password);
             remeberPass.setChecked(true);
         }
-        login.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String account = accountEdit.getText().toString();
