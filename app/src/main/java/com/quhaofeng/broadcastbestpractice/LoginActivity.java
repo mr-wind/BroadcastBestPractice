@@ -56,7 +56,7 @@ public class LoginActivity extends BaseActivity{
                     }else{
                         mEditor.clear();
                     }
-                    mEditor.commit();
+                    mEditor.apply();//可以用apply
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
