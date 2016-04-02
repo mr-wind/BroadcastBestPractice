@@ -12,7 +12,10 @@ public class ActivityCollecter {
     public static List<Activity> sActivities = new ArrayList<Activity>();
 
     public static void addActivity(Activity activity){
-        sActivities.add(activity);
+        //通过判断来去掉重复的Activity
+        if (!sActivities.contains(activity)){
+            sActivities.add(activity);
+        }
     }
 
     public static void removeActivity(Activity activity){
